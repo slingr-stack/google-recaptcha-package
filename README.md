@@ -41,7 +41,7 @@ The Javascript API of the googlerecaptcha package has two pieces:
 - **Flow steps**
 
 ## HTTP requests
-You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [googlerecaptcha API](API_URL_HERE) like this:
+You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [googlerecaptcha API](https://www.google.com/recaptcha/about/) like this:
 ```javascript
 var response = pkg.googlerecaptcha.api.post({
     path: "/siteverify",
