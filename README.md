@@ -16,12 +16,12 @@
 </table>
 
 # Overview
-The Google Recaptcha endpoint allows to validate a given token server.
+The Google reCAPTCHA endpoint allows to validate a given token server.
 
 # Configuration
-In order to use the Google Recaptcha endpoint you must create an app in the Google Recaptcha Console by following these instructions:
+In order to use the Google reCAPTCHA endpoint you must create an app in the Google reCAPTCHA Console by following these instructions:
 
-* Access to Google Recaptcha Console
+* Access to Google reCAPTCHA Console
 * Register a new site.
 * Enter Label
 * Choose recaptch type
@@ -35,13 +35,13 @@ Use this secret key for communication between your site and reCAPTCHA..
 
 # Javascript API
 
-The Javascript API of the googlerecaptcha package has two pieces:
+The Javascript API of the Google reCAPTCHA package has two pieces:
 
 - **HTTP requests**
 - **Flow steps**
 
 ## HTTP requests
-You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [googlerecaptcha API](https://www.google.com/recaptcha/about/) like this:
+You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [Google reCAPTCHA API](https://www.google.com/recaptcha/about/) like this:
 ```javascript
 var response = pkg.googlerecaptcha.api.post({
     path: "/siteverify",
