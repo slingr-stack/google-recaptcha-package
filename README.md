@@ -8,31 +8,49 @@
     </thead>
     <tbody>
     <tr>
-        <td>Skeleton package</td>
-        <td>January 3, 2024</td>
-        <td>Detailed description of the API of the Skeleton package.</td>
+        <td>GoogleReCAPTCHA package</td>
+        <td>February 14, 2024</td>
+        <td>Detailed description of the API of the GoogleReCAPTCHA package.</td>
     </tr>
     </tbody>
 </table>
 
 # Overview
+The Google Recaptcha endpoint allows to validate a given token server.
+
+# Configuration
+In order to use the Google Recaptcha endpoint you must create an app in the Google Recaptcha Console by following these instructions:
+
+* Access to Google Recaptcha Console
+* Register a new site.
+* Enter Label
+* Choose recaptch type
+* Set allowed domains
+* Accept Terms of Service
+* That will give you the Site Key and Site Secret values.
+
+## Site Secret
+Use this secret key for communication between your site and reCAPTCHA..
+
 
 # Javascript API
 
-The Javascript API of the skeleton package has two pieces:
+The Javascript API of the googlerecaptcha package has two pieces:
 
 - **HTTP requests**
 - **Flow steps**
 
 ## HTTP requests
-You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [skeleton API](API_URL_HERE) like this:
+You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [googlerecaptcha API](API_URL_HERE) like this:
 ```javascript
-var response = pkg.skeleton.api.get('/path3')
-var response = pkg.skeleton.api.put('/path1/:testPath', body)
-var response = pkg.skeleton.api.put('/path1/:testPath')
-var response = pkg.skeleton.api.patch('/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '', body)
-var response = pkg.skeleton.api.patch('/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '')
-var response = pkg.skeleton.api.delete('/path4')
+var response = pkg.googlerecaptcha.api.post({
+    path: "/siteverify",
+    headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: {"RESPONSE" : "captcha"}
+});
 ```
 
 Please take a look at the documentation of the [HTTP service](https://github.com/slingr-stack/http-service)
@@ -205,7 +223,6 @@ For more information about how shortcuts or flow steps work, and how they are ge
 
 ## Dependencies
 * HTTP Service (v1.3.7)
-* Oauth Package (v1.0.19) // TODO review and remove if its needed
 
 ## About SLINGR
 

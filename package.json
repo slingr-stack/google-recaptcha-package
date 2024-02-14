@@ -1,6 +1,6 @@
 {
-    "name": "skeleton",
-    "label": "Skeleton Package",
+    "name": "googlerecaptcha",
+    "label": "Google ReCAPTCHA Package",
     "dependencies": [
         {
             "type": "service",
@@ -14,13 +14,18 @@
             "version": "v1.0.19"
         }
     ],
-    "configurationBuilder": "/configurationBuilder.js",
     "configuration": [
         {
-            "name": "SKELETON_API_BASE_URL",
-            "label": "Skeleton Api Url",
+            "label": "Recaptcha Secret",
+            "name": "recaptchaSecret",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "GOOGLE_RE_CAPTCHA_API_BASE_URL",
+            "label": "Google ReCAPTCHA Api Url",
             "type": "label",
-            "value": "https://example.com/"
+            "value": "https://www.google.com/recaptcha/api"
         },
         {
             "name": "choice",
@@ -85,18 +90,8 @@
         },
         {
             "type": "flowStep",
-            "namespace": "apiCallSkeleton",
-            "path": "/flowSteps/apiCallSkeleton"
-        },
-        {
-            "type": "flowStep",
-            "namespace": "customFlow",
-            "path": "/flowSteps/customFlow"
-        },
-        {
-            "type": "uiService",
-            "namespace": "testUiService",
-            "path": "/uiServices/testUiService"
+            "namespace": "apiReCAPTCHA",
+            "path": "/flowSteps/apiReCAPTCHA"
         }
     ]
 }
